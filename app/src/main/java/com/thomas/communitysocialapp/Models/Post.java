@@ -4,7 +4,6 @@ import com.google.firebase.database.ServerValue;
 
 public class Post {
 
-
     private String postKey;
     private String title;
     private String description;
@@ -12,7 +11,6 @@ public class Post {
     private String userId;
     private String userPhoto;
     private Object timeStamp;
-
 
     public Post(String title, String description, String picture, String userId, String userPhoto) {
         this.title = title;

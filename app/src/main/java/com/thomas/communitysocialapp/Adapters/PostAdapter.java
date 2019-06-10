@@ -24,7 +24,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder> 
     Context mContext;
     List<Post> mData;
 
-
     public PostAdapter(Context mContext, List<Post> mData) {
         this.mContext = mContext;
         this.mData = mData;
@@ -44,8 +43,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder> 
         holder.tvTitle.setText(mData.get(position).getTitle());
         Glide.with(mContext).load(mData.get(position).getPicture()).into(holder.imgPost);
         Glide.with(mContext).load(mData.get(position).getUserPhoto()).into(holder.imgPostProfile);
-
-
     }
 
     @Override
@@ -69,6 +66,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyViewHolder> 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     Intent postDetailActivity = new Intent(mContext, PostDetailActivity.class);
                     int position = getAdapterPosition();
 

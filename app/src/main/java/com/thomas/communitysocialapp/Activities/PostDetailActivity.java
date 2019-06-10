@@ -126,7 +126,7 @@ public class PostDetailActivity extends AppCompatActivity {
         String postDescription = getIntent().getExtras().getString("description");
         txtPostDesc.setText(postDescription);
 
-        // setcomment user image
+        // set Comment user image
 
         Glide.with(this).load(firebaseUser.getPhotoUrl()).into(imgCurrentUser);
         // get post id
